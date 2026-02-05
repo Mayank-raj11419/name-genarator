@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+:root {
+    --bgc1: #2e2e2e;
+    --bgc2: #1c1c1c9e;
+    --bgc3: rgb(29, 29, 29);
+
+
+    --c1: rgb(220, 220, 220);
+
+}
+
+
+
+body {
+    background-color: var(--bgc1);
+    color: var(--c1);
+    /* display: flex;
+    justify-content: center;
+    align-content: center; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+
+.box {
+    background-color: var(--bgc2);
+    height: 85vh;
+    width: 85vw;
+    display: flex;
+    justify-content: center;
+   
+    border-radius: 5vh;
+}
+
+.content {
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+}
+
+.wel {
+
+    font-size: 80px;
+    font-family: "Ballet", cursive;
+    font-weight: 400;
+    margin: 50px 0px 0px 0px;
+    padding: 0px;
+
+    animation: slide-in 1s ease-out;
+
+    
+
+}
+@keyframes slide-in {
+  from {
+    transform: scale(0);
+    transform: translateX(80vw); /* Starts off the right edge */
+  }
+  to {
+    transform: scale(1);
+    transform: translateX(0); /* Ends in its original position */
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    transform: scale(0);
+    transform: translateX(-80vw); /* Starts off the right edge */
+  }
+  to {
+    transform: scale(1);
+    transform: translateX(0); /* Ends in its original position */
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+    transform: translateY(100vw);
+    
+  }
+  to {
+    transform: scale(1);
+    transform: translateY(0vw);
+  }
+}
+
+
+.msg{
+    font-size: 35px;
+    font-weight: 20;
+    font-family: "Poiret One", sans-serif;
+    padding: 10px;
+
+    animation-name: slide-in-right ;
+    animation-duration: 1s;
+    
+}
+
+.btn{
+    padding: 5px 15px;
+    margin: 15vh;
+    background-color: var(--bgc3);
+    border: 2px solid rgb(65, 65, 65);
+    border-radius: 40px;
+    width: 100px;
+    color: var(--c1);
+
+    position: absolute;
+    bottom: 10px;
+
+    font-size: large;
+    
+    font-family: "poiret one", sans-serif;
+    animation: zoom 3s ;
+    cursor: default;
+
+    transform: scale(1);
+    transition: transform 0.75s ;
+
+}
+
+.btn:hover{
+    transform:scale(1.3);
+    
+    background-color: var(--bgc1);
+
+    
+}
+
+.rst{
+    background-color: var(--bgc2);
+    height: 85vh;
+    width: 85vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+    border-radius: 5vh;
+    display: none;
+    text-align: center;
+}
